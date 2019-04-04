@@ -1,6 +1,6 @@
 Pyeonghwa
 ===================================
-https://img.shields.io/badge/Authentic-Mambo-brightgreen.svg
+
 
 I know that is quite a name for an app.
 
