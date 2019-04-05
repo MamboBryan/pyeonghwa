@@ -29,24 +29,50 @@
         android:background="@color/black" />
 
     <TextView
-        android:id="@+id/start_riddle"
+        android:textAlignment="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/start_english"
+        android:layout_above="@id/start_hint"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/start_activity_english" />
+
+    <TextView
+        android:textAlignment="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="32dp"
+        android:id="@+id/start_hint"
+        android:layout_above="@id/start_proverb"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/start_activity_hint" />
+
+    <TextView
+        android:id="@+id/start_proverb"
         android:textAppearance="?android:textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
-        android:text="@string/start_phrase" />
+        android:text="@string/start_proverb" />
 
     <LinearLayout
         android:layout_margin="16dp"
-        android:layout_below="@id/start_riddle"
+        android:layout_below="@id/start_proverb"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:textAllCaps="true"
-            android:textSize="20sp"
+            android:textSize="48sp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="0dp"
@@ -56,7 +82,7 @@
 
         <TextView
             android:textAllCaps="true"
-            android:textSize="20sp"
+            android:textSize="48sp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="0dp"
@@ -66,7 +92,7 @@
 
         <TextView
             android:textAllCaps="true"
-            android:textSize="20sp"
+            android:textSize="48sp"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="0dp"
@@ -82,7 +108,7 @@
         android:longClickable="true"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="@string/start"
+        android:text="@string/start_button_text"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"/>
