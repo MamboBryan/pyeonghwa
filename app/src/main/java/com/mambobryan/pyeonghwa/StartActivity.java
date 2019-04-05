@@ -1,5 +1,6 @@
 package com.mambobryan.pyeonghwa;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.support.v4.content.ContextCompat;
@@ -60,6 +61,10 @@ public class StartActivity extends AppCompatActivity {
         } else if (counter == 3) {
             TextView firstLetter = findViewById(R.id.start_puzzle_t);
             firstLetter.setText("T");
+
+            //After it updates the last letter it goes to the next screen
+            Intent startIntent = new Intent(StartActivity.this, WelcomeActivity.class);
+            StartActivity.this.startActivity(startIntent);
 
         } else {
             Toast.makeText(this, "Too many long press", Toast.LENGTH_SHORT).show();
