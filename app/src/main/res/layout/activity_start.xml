@@ -2,21 +2,89 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_relative_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/animation_list"
+    android:fitsSystemWindows="true"
     tools:context="com.mambobryan.pyeonghwa.StartActivity">
 
     <TextView
+        android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="48sp"
-        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"/>
+        android:layout_marginTop="64dp"
+        android:text="@string/app_name"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/black" />
 
+    <View
+        android:id="@+id/black_line"
+        android:layout_width="50dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:background="@color/black" />
 
+    <TextView
+        android:id="@+id/start_riddle"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:text="@string/start_phrase" />
 
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_below="@id/start_riddle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="O"/>
+
+        <TextView
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="u"/>
+
+        <TextView
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="t"/>
+
+    </LinearLayout>
+
+    <Button
+        android:background="@drawable/start_buttton_bg"
+        android:id="@+id/lets_go_button"
+        android:longClickable="true"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
 
 </RelativeLayout>

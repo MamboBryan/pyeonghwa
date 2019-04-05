@@ -5,4 +5,12 @@
     <color name="colorAccent">#B721FF</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="gradient_one_start">#B721FF</color>
+    <color name="gradient_one_end">#21D4FD</color>
+    <color name="gradient_two_start">#8EC5FC</color>
+    <color name="gradient_two_end">#E0C3FC</color>
+    <color name="gradient_three_start">#FAACA8</color>
+    <color name="gradient_three_end">#DDD6F3</color>
+    <color name="gradient_four_start">#08AEEA</color>
+    <color name="gradient_four_end">#2AF598</color>
 </resources>
