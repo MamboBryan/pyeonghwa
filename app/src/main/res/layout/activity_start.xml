@@ -71,6 +71,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/start_puzzle_o"
             android:textAllCaps="true"
             android:textSize="48sp"
             android:textColor="@color/black"
@@ -81,6 +82,7 @@
             tools:text="O"/>
 
         <TextView
+            android:id="@+id/start_puzzle_u"
             android:textAllCaps="true"
             android:textSize="48sp"
             android:textColor="@color/black"
@@ -91,6 +93,7 @@
             tools:text="u"/>
 
         <TextView
+            android:id="@+id/start_puzzle_t"
             android:textAllCaps="true"
             android:textSize="48sp"
             android:textColor="@color/black"
@@ -111,6 +114,6 @@
         android:text="@string/start_button_text"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="48dp"/>
 
 </RelativeLayout>
