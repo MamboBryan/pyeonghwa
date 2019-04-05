@@ -13,4 +13,11 @@
     <color name="gradient_three_end">#DDD6F3</color>
     <color name="gradient_four_start">#08AEEA</color>
     <color name="gradient_four_end">#2AF598</color>
+    <color name="gradient_five_start">#FFFFFF</color>
+    <color name="gradient_five_center">#6DD5FA</color>
+    <color name="gradient_five_end">#2980B9</color>
+    <color name="gradient_six_start">#BDFFF3</color>
+    <color name="gradient_six_end">#4AC29A</color>
+    <color name="gradient_seven_start">#FFFB7D</color>
+    <color name="gradient_seven_end">#85FFBD</color>
 </resources>

@@ -1,5 +1,8 @@
 package com.mambobryan.pyeonghwa;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,6 +42,13 @@ public class WelcomeActivity extends AppCompatActivity {
                     userText.setText(getString(R.string.welcome_text_on_tap_empty));
                 } else {
                     userText.setText(getString(R.string.welcome_text_on_tap) + " " + usernameString);
+
+                    //Start new activity
+                    Intent welcomeIntent = new Intent(
+                            WelcomeActivity.this, FirstPuzzleActivity.class);
+
+                    welcomeIntent.putExtra("username", usernameString);
+                    WelcomeActivity.this.startActivity(welcomeIntent);
                 }
 
             }
