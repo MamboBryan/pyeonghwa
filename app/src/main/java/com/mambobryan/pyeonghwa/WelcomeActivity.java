@@ -5,8 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -17,7 +19,7 @@ public class WelcomeActivity extends AppCompatActivity {
     //Initialize start button
     Button startButton;
 
-    //
+    //Initialize TextView for the username
     TextView userText;
 
     @Override

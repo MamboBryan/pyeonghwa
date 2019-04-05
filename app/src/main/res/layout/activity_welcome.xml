@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_two"
@@ -15,8 +16,8 @@
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal"
         android:text="@string/welcome_message"
-        android:textColor="@color/black"
-        android:textAppearance="?android:textAppearanceLarge" />
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/black" />
 
     <View
         android:id="@+id/black_line"
@@ -26,80 +27,107 @@
         android:layout_marginTop="4dp"
         android:background="@color/black" />
 
-    <RelativeLayout
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/avatar_bg"
-            android:padding="8dp"
-            android:src="@drawable/yoga_start" />
-    </RelativeLayout>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
-        android:text="@string/welcome_instruction1"
-        android:textAppearance="?android:textAppearanceMedium" />
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
 
-    <RelativeLayout
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/avatar_bg"
-            android:padding="8dp"
-            android:src="@drawable/yoga_middle" />
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/avatar_bg"
+                android:padding="8dp"
+                android:src="@drawable/yoga_start" />
+        </RelativeLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
-        android:text="@string/welcome_instruction2"
-        android:textAppearance="?android:textAppearanceMedium" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/welcome_instruction1"
+            android:textAppearance="?android:textAppearanceMedium" />
 
-    <RelativeLayout
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    </LinearLayout>
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/avatar_bg"
-            android:padding="8dp"
-            android:src="@drawable/yoga_end" />
-    </RelativeLayout>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
-        android:text="@string/welcome_instruction3"
-        android:textAppearance="?android:textAppearanceMedium" />
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/welcome_instruction2"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/avatar_bg"
+                android:padding="8dp"
+                android:src="@drawable/yoga_middle" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/avatar_bg"
+                android:padding="8dp"
+                android:src="@drawable/yoga_end" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/welcome_instruction3"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/welcome_user_text"
-        android:textAppearance="?android:textAppearanceSmall"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="@string/welcome_text_on_tap"/>
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceSmall"
+        tools:text="@string/welcome_text_on_tap" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -108,10 +136,10 @@
 
         <EditText
             android:id="@+id/username"
-            android:background="@drawable/start_buttton_bg"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:background="@drawable/start_buttton_bg"
             android:hint="username"
             android:inputType="textCapWords"
             android:padding="16dp" />
@@ -120,16 +148,16 @@
 
 
     <RelativeLayout
-        android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_marginTop="32dp">
 
         <Button
             android:id="@+id/welcome_start_button"
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:background="@drawable/start_buttton_bg"
             android:text="@string/welcome_button" />
     </RelativeLayout>
