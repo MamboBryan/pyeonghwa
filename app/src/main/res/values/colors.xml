@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B3E5FC</color>
+    <color name="colorPrimaryDark">#4FC3F7</color>
+    <color name="colorAccent">#B721FF</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gradient_one_start">#B721FF</color>
+    <color name="gradient_one_end">#21D4FD</color>
+    <color name="gradient_two_start">#8EC5FC</color>
+    <color name="gradient_two_end">#E0C3FC</color>
+    <color name="gradient_three_start">#FAACA8</color>
+    <color name="gradient_three_end">#DDD6F3</color>
+    <color name="gradient_four_start">#08AEEA</color>
+    <color name="gradient_four_end">#2AF598</color>
+    <color name="gradient_five_start">#FFFFFF</color>
+    <color name="gradient_five_center">#6DD5FA</color>
+    <color name="gradient_five_end">#2980B9</color>
+    <color name="gradient_six_start">#BDFFF3</color>
+    <color name="gradient_six_end">#4AC29A</color>
+    <color name="gradient_seven_start">#FFFB7D</color>
+    <color name="gradient_seven_end">#85FFBD</color>
+</resources>

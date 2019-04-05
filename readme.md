@@ -1,6 +1,5 @@
 Pyeonghwa
 ===================================
-https://img.shields.io/badge/Authentic-Mambo-brightgreen.svg
 
 I know that is quite a name for an app.
 
@@ -32,7 +31,7 @@ submitting a pull request through GitHub.
 License
 -------
 
-Copyright 2016 The Android Open Source Project, Inc.
+Copyright 2019 Brian Ochieng Odhiambo.
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
