@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">Pyeonghwa</string>
+
+    <!-- StartActivity strings -->
     <string name="start_proverb">궁 하 면      통 한 다</string>
     <string name="start_button_text">lets go</string>
-    <string name="start_activity_english">Adventure call to the adventurer for the bliss to come</string>
+    <string name="start_activity_english">Adventure calls to the adventurer for the bliss to come</string>
     <string name="start_activity_hint">Long press button to get started</string>
+
+    <!-- WelcomeActivity strings -->
+    <string name="welcome_message">Welcome</string>
+    <string name="welcome_instruction1"> READ </string>
+    <string name="welcome_instruction2"> FIND </string>
+    <string name="welcome_instruction3"> SOLVE </string>
+    <string name="welcome_player_name"> Enter your username </string>
+    <string name="welcome_button"> Start </string>
+    <string name="welcome_text_on_tap_empty">Enter your name below</string>
+    <string name="welcome_text_on_tap">Welcome to pyeonghwa </string>
 </resources>
