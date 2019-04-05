@@ -12,6 +12,8 @@
     <string name="welcome_instruction1"> READ </string>
     <string name="welcome_instruction2"> FIND </string>
     <string name="welcome_instruction3"> SOLVE </string>
-    <string name="welcome_player_name"> Enter username </string>
+    <string name="welcome_player_name"> Enter your username </string>
     <string name="welcome_button"> Start </string>
+    <string name="welcome_text_on_tap_empty">Enter your name below</string>
+    <string name="welcome_text_on_tap">Welcome to pyeonghwa </string>
 </resources>

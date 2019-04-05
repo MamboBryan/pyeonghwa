@@ -14,6 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Method;
+
 public class StartActivity extends AppCompatActivity {
 
     //Declare startActivity button
@@ -37,6 +39,18 @@ public class StartActivity extends AppCompatActivity {
                 setRevealText(longPressed);
                 longPressed++;
                 return false;
+            }
+        });
+
+        //Method for going to the next page when back button is pressed
+        letsGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (longPressed > 3){
+                    //After it updates the last letter it goes to the next screen
+                    Intent startIntent = new Intent(StartActivity.this, WelcomeActivity.class);
+                    StartActivity.this.startActivity(startIntent);
+                }
             }
         });
     }
@@ -70,5 +84,21 @@ public class StartActivity extends AppCompatActivity {
             Toast.makeText(this, "Too many long press", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        //Method for going to the next page when back button is pressed
+        letsGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (longPressed > 3){
+                    //After it updates the last letter it goes to the next screen
+                    Intent startIntent = new Intent(StartActivity.this, WelcomeActivity.class);
+                    StartActivity.this.startActivity(startIntent);
+                }
+            }
+        });
     }
 }

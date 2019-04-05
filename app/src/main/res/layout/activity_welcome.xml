@@ -92,14 +92,24 @@
         android:text="@string/welcome_instruction3"
         android:textAppearance="?android:textAppearanceMedium" />
 
+    <TextView
+        android:id="@+id/welcome_user_text"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/welcome_text_on_tap"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp">
 
         <EditText
+            android:id="@+id/username"
             android:background="@drawable/start_buttton_bg"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:hint="username"
@@ -108,12 +118,15 @@
 
     </RelativeLayout>
 
+
     <RelativeLayout
+        android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp">
 
         <Button
+            android:id="@+id/welcome_start_button"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
