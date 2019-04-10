@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Pyeonghwa</string>
 
+    <!-- player levels -->
+    <string name="level_one">Adventurer</string>
+    <string name="level_two">Novice</string>
+    <string name="level_three">Professional</string>
+    <string name="level_four">Master</string>
+    <string name="experience">Exp</string>
+
     <!-- StartActivity strings -->
     <string name="start_proverb">궁 하 면      통 한 다</string>
     <string name="start_button_text">lets go</string>
@@ -10,10 +17,16 @@
     <!-- WelcomeActivity strings -->
     <string name="welcome_message">Welcome</string>
     <string name="welcome_instruction1"> READ </string>
-    <string name="welcome_instruction2"> FIND </string>
-    <string name="welcome_instruction3"> SOLVE </string>
+    <string name="welcome_instruction2"> LEARN </string>
+    <string name="welcome_instruction3"> ENJOY </string>
     <string name="welcome_player_name"> Enter your username </string>
     <string name="welcome_button"> Start </string>
     <string name="welcome_text_on_tap_empty">Enter your name below</string>
     <string name="welcome_text_on_tap">Welcome to pyeonghwa </string>
+
+    <!-- FirstPuzzleActivity strings -->
+    <string name="first_korean_proverb">누워서 떡 먹기 </string>
+    <string name="first_english_translation"> A piece of cake </string>
+    <string name="first_tit_bit"> Sometimes things are not as easy as a piece of cake </string>
+    <string name="first_puzzle_button">Next</string>
 </resources>

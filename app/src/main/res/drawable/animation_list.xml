@@ -3,19 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@drawable/gradient"
-        android:duration="6000"/>
-
-    <item
         android:drawable="@drawable/gradient_two"
-        android:duration="6000"/>
+        android:duration="4000"/>
 
     <item
         android:drawable="@drawable/gradient_three"
-        android:duration="6000"/>
+        android:duration="4000"/>
 
     <item
         android:drawable="@drawable/gradient_four"
-        android:duration="6000"/>
+        android:duration="4000"/>
+
+    <item
+        android:drawable="@drawable/gradient_five"
+        android:duration="4000"/>
+
+    <item
+        android:drawable="@drawable/gradient_six"
+        android:duration="4000"/>
 
 </animation-list>
