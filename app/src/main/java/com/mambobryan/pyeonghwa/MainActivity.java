@@ -12,20 +12,26 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     //Initializing string and textView variable
     String usernameString;
 
     TextView displayUsername;
-    TextView firstProverbEnglish;
-    TextView firstTitBit;
+    TextView koreanProverbTexView;
+    TextView proverbEnglishTranslation;
+    TextView koreanTitBit;
 
     Button proceedButton;
 
     RelativeLayout mainLayout;
 
-    int clue = 0;
+    int myRandomNumber;
+
+    Boolean buttonIsClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,22 +53,96 @@ public class MainActivity extends AppCompatActivity {
         final Intent firstPuzzleIntent = getIntent();
         usernameString = firstPuzzleIntent.getStringExtra("username");
 
-        firstTitBit = findViewById(R.id.first_tit_bit);
-        firstProverbEnglish = findViewById(R.id.first_proverb_english);
+        //Generate random number
+        myRandomNumber = new Random().nextInt(10) + 1;
+
+        final ArrayList<Proverb> proverbs = new ArrayList<>();
+
+        proverbs.add(new Proverb(getResources().getString(R.string.first_korean_proverb),
+                getResources().getString(R.string.second_english_translation),
+                getResources().getString(R.string.second_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.third_korean_proverb),
+                getResources().getString(R.string.third_english_translation),
+                getResources().getString(R.string.third_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.fourth_korean_proverb),
+                getResources().getString(R.string.fourth_english_translation),
+                getResources().getString(R.string.fourth_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.fifth_korean_proverb),
+                getResources().getString(R.string.fifth_english_translation),
+                getResources().getString(R.string.fifth_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.sixth_korean_proverb),
+                getResources().getString(R.string.sixth_english_translation),
+                getResources().getString(R.string.sixth_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.seventh_korean_proverb),
+                getResources().getString(R.string.seventh_korean_proverb),
+                getResources().getString(R.string.seventh_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.eighth_korean_proverb),
+                getResources().getString(R.string.eighth_english_translation),
+                getResources().getString(R.string.eighth_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.ninth_korean_proverb),
+                getResources().getString(R.string.ninth_english_translation),
+                getResources().getString(R.string.ninth_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.last_korean_proverb),
+                getResources().getString(R.string.last_english_translation),
+                getResources().getString(R.string.last_tit_bit)));
+
+
+
+        //Get the TextView and ButtonView of the different components
+        koreanProverbTexView = findViewById(R.id.korean_proverb_text_view);
+        proverbEnglishTranslation = findViewById(R.id.first_proverb_english);
+        koreanTitBit = findViewById(R.id.first_tit_bit);
+
         displayUsername = findViewById(R.id.username_display_text);
         displayUsername.setText(usernameString);
 
         proceedButton = findViewById(R.id.first_puzzle_button);
+
+        //Get a proverb object at the randomNumber position
+        final Proverb myProverbObject = proverbs.get(myRandomNumber);
+
+        //Sets the initial korean proverb and also the translations
+        koreanProverbTexView.setText(getResources().getString(R.string.start_korean_proverb));
+        proverbEnglishTranslation.setText(getResources().getString(R.string.start_english_translation));
+        koreanTitBit.setText(getResources().getString(R.string.start_tit_bit));
+
+        //This gives extra information about the proverb
         proceedButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
 
-                firstProverbEnglish.setText(getResources().getString(R.string.first_english_translation));
-                firstTitBit.setText(getResources().getString(R.string.first_tit_bit));
+                proverbEnglishTranslation.setText(myProverbObject.getEnglishTranslation());
+                koreanTitBit.setText(myProverbObject.getTitBit());
 
                 return true;
             }
         });
 
+        //This method sets the next proverb
+        proceedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+                //Reset random number on button click
+                myRandomNumber = new Random().nextInt(10) + 1;
+
+                //get object proverb, translation and Titbit then set to the respective TextViews
+                koreanProverbTexView.setText(myProverbObject.getKoreanProverb());
+
+                proverbEnglishTranslation.setText(" ");
+                koreanTitBit.setText(" ");
+
+            }
+        });
     }
+
+
 }
