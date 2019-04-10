@@ -24,9 +24,69 @@
     <string name="welcome_text_on_tap_empty">Enter your name below</string>
     <string name="welcome_text_on_tap">Welcome to pyeonghwa </string>
 
-    <!-- FirstPuzzleActivity strings -->
+    <!-- Start Proverb strings -->
+    <string name="start_korean_proverb"> 가재는 게 편이라 </string>
+    <string name="start_english_translation"> The crayfish sides with the crab. </string>
+    <string name="start_tit_bit">
+        People with similar traits or backgrounds usually stick together. </string>
+
+    <!-- First Proverb strings -->
     <string name="first_korean_proverb">누워서 떡 먹기 </string>
     <string name="first_english_translation"> A piece of cake </string>
     <string name="first_tit_bit"> Sometimes things are not as easy as a piece of cake </string>
     <string name="first_puzzle_button">Next</string>
+
+    <!-- Second Proverb strings -->
+    <string name="second_korean_proverb">원숭이도 나무에서 떨어진다 </string>
+    <string name="second_english_translation"> Even monkeys may fall from trees. </string>
+    <string name="second_tit_bit"> Monkeys are considered adept at climbing trees but even monkeys
+        sometimes fall. This proverb is saying that even experts can make mistakes. </string>
+
+    <!-- Third Proverb strings -->
+    <string name="third_korean_proverb"> 하늘의 별 따기 </string>
+    <string name="third_english_translation"> Plucking a star from the sky </string>
+    <string name="third_tit_bit">
+        when something is too difficult or (almost) impossible to get done. </string>
+
+    <!-- Fourth Proverb strings -->
+    <string name="fourth_korean_proverb"> 남의 떡이 더 커 보인다 </string>
+    <string name="fourth_english_translation"> Others’ rice cakes always look bigger. </string>
+    <string name="fourth_tit_bit"> when other people’s possessions always look better than your own,
+        even when they are really not. </string>
+
+    <!-- Fifth Proverb strings -->
+    <string name="fifth_korean_proverb"> 시작이 반이다 </string>
+    <string name="fifth_english_translation"> Starting is the half. </string>
+    <string name="fifth_tit_bit">Getting started is often considered the hardest step.
+        But once begun, it will move you forward easily.</string>
+
+    <!-- Sixth Proverb strings -->
+    <string name="sixth_korean_proverb"> 고생 끝에 낙이 온다 </string>
+    <string name="sixth_english_translation"> At the end of hardship comes happiness. </string>
+    <string name="sixth_tit_bit"> used during difficult times to encourage someone to keep working
+        hard and not give up. </string>
+
+    <!-- Seventh Proverb strings -->
+    <string name="seventh_korean_proverb"> 개천에서 용 난다 </string>
+    <string name="seventh_english_translation"> A dragon rises up from a small stream. </string>
+    <string name="seventh_tit_bit">  This term is used to describe a great man or woman arising
+        from humble beginnings. </string>
+
+    <!-- Eighth Proverb strings -->
+    <string name="eighth_korean_proverb"> 공자 앞에서 문자 쓴다 </string>
+    <string name="eighth_english_translation"> Write hanja in front of Confucius. </string>
+    <string name="eighth_tit_bit"> This proverb describes someone who is so arrogant that they
+        are attempting to instruct an expert how to do something.  </string>
+
+    <!-- Ninth Proverb strings -->
+    <string name="ninth_korean_proverb"> 등잔 밑이 어둡다 </string>
+    <string name="ninth_english_translation"> It’s dark under the lamp. </string>
+    <string name="ninth_tit_bit">
+        This oxymoron infers that sometimes the answer is right under our noses. </string>
+
+    <!-- Last Proverb strings -->
+    <string name="last_korean_proverb"> 죄송합니다 </string>
+    <string name="last_english_translation"> joesonghamnida </string>
+    <string name="last_tit_bit"> I cannot even begin to express how sorry I am.
+    I'm sorry Nima, very very sorry.</string>
 </resources>

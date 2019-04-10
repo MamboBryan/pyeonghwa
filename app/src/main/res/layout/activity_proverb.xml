@@ -17,18 +17,18 @@
         android:textAppearance="?android:textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/first_puzzle"
+        android:id="@+id/korean_proverb_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/start_proverb"
+        tools:text="Korean proverb"
         android:textAppearance="?android:textAppearanceMedium" />
 
     <TextView
         android:id="@+id/first_proverb_english"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_above="@+id/first_puzzle"
+        android:layout_above="@+id/korean_proverb_text_view"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
         android:textAlignment="center"
