@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/first_puzzle_layout"
+    android:id="@+id/proverb_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_three"
-    tools:context="com.mambobryan.pyeonghwa.FirstPuzzleActivity">
+    android:background="@drawable/animation_list"
+    tools:context="com.mambobryan.pyeonghwa.MainActivity">
 
     <TextView
         android:id="@+id/username_display_text"
@@ -35,12 +35,12 @@
         tools:text="English translation" />
 
     <TextView
-        android:layout_marginBottom="16dp"
         android:id="@+id/first_tit_bit"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
         android:layout_above="@+id/first_puzzle_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:textAlignment="center"
         tools:text="My tit bit" />
 
