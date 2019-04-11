@@ -29,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     RelativeLayout mainLayout;
 
+    MediaPlayer myMediaPlayer;
+
     int myRandomNumber;
+
+    Proverb myProverbObject;
 
     Boolean buttonIsClicked = false;
 
@@ -38,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proverb);
 
-        MediaPlayer myMediaPlayer = MediaPlayer.create(this, R.raw.epiphany);
+        myMediaPlayer = MediaPlayer.create(this, R.raw.epiphany);
         myMediaPlayer.start();
         myMediaPlayer.setLooping(true);
         myMediaPlayer.setVolume(10, 10);
@@ -53,12 +57,14 @@ public class MainActivity extends AppCompatActivity {
         final Intent firstPuzzleIntent = getIntent();
         usernameString = firstPuzzleIntent.getStringExtra("username");
 
-        //Generate random number
-        myRandomNumber = new Random().nextInt(10) + 1;
 
         final ArrayList<Proverb> proverbs = new ArrayList<>();
 
         proverbs.add(new Proverb(getResources().getString(R.string.first_korean_proverb),
+                getResources().getString(R.string.second_english_translation),
+                getResources().getString(R.string.second_tit_bit)));
+
+        proverbs.add(new Proverb(getResources().getString(R.string.second_korean_proverb),
                 getResources().getString(R.string.second_english_translation),
                 getResources().getString(R.string.second_tit_bit)));
 
@@ -95,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getString(R.string.last_tit_bit)));
 
 
-
         //Get the TextView and ButtonView of the different components
         koreanProverbTexView = findViewById(R.id.korean_proverb_text_view);
         proverbEnglishTranslation = findViewById(R.id.first_proverb_english);
@@ -106,13 +111,30 @@ public class MainActivity extends AppCompatActivity {
 
         proceedButton = findViewById(R.id.first_puzzle_button);
 
-        //Get a proverb object at the randomNumber position
-        final Proverb myProverbObject = proverbs.get(myRandomNumber);
 
         //Sets the initial korean proverb and also the translations
         koreanProverbTexView.setText(getResources().getString(R.string.start_korean_proverb));
         proverbEnglishTranslation.setText(getResources().getString(R.string.start_english_translation));
         koreanTitBit.setText(getResources().getString(R.string.start_tit_bit));
+
+        //This method sets the next proverb
+        proceedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Get a proverb object at the randomNumber position
+                myProverbObject = proverbs.get(myRandomNumber);
+
+                //Reset random number on button click
+                myRandomNumber = new Random().nextInt(10);
+
+                //get object proverb, translation and Titbit then set to the respective TextViews
+                koreanProverbTexView.setText(myProverbObject.getKoreanProverb());
+
+                proverbEnglishTranslation.setText(" ");
+                koreanTitBit.setText(" ");
+            }
+        });
 
         //This gives extra information about the proverb
         proceedButton.setOnLongClickListener(new View.OnLongClickListener() {
@@ -125,24 +147,49 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-        //This method sets the next proverb
-        proceedButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-                //Reset random number on button click
-                myRandomNumber = new Random().nextInt(10) + 1;
-
-                //get object proverb, translation and Titbit then set to the respective TextViews
-                koreanProverbTexView.setText(myProverbObject.getKoreanProverb());
-
-                proverbEnglishTranslation.setText(" ");
-                koreanTitBit.setText(" ");
-
-            }
-        });
     }
 
+    /**
+     * This method releases the mediaPlayer object
+     */
+    public void releaseMediaPlayer() {
+        if (myMediaPlayer != null) {
+            myMediaPlayer.release();
+            myMediaPlayer = null;
+        }
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        myMediaPlayer.pause();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        myMediaPlayer.start();
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        myMediaPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        releaseMediaPlayer();
+    }
 }
