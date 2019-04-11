@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     Proverb myProverbObject;
 
-    Boolean buttonIsClicked = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         final ArrayList<Proverb> proverbs = new ArrayList<>();
 
         proverbs.add(new Proverb(getResources().getString(R.string.first_korean_proverb),
-                getResources().getString(R.string.second_english_translation),
-                getResources().getString(R.string.second_tit_bit)));
+                getResources().getString(R.string.first_english_translation),
+                getResources().getString(R.string.first_tit_bit)));
 
         proverbs.add(new Proverb(getResources().getString(R.string.second_korean_proverb),
                 getResources().getString(R.string.second_english_translation),
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getString(R.string.sixth_tit_bit)));
 
         proverbs.add(new Proverb(getResources().getString(R.string.seventh_korean_proverb),
-                getResources().getString(R.string.seventh_korean_proverb),
+                getResources().getString(R.string.seventh_english_translation),
                 getResources().getString(R.string.seventh_tit_bit)));
 
         proverbs.add(new Proverb(getResources().getString(R.string.eighth_korean_proverb),
