@@ -5,7 +5,7 @@
     android:id="@+id/start_relative_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/gradient_bg"
     android:fitsSystemWindows="true"
     tools:context="com.mambobryan.pyeonghwa.StartActivity">
 

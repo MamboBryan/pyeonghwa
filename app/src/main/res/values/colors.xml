@@ -5,7 +5,9 @@
     <color name="colorAccent">#B721FF</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
-    <color name="gradient_one_start">#B721FF</color>
+    <color name="gradient_start">#E9E6C4</color>
+    <color name="gradient_end">#21D4FD</color>
+    <color name="gradient_one_start">#9F7BAD</color>
     <color name="gradient_one_end">#21D4FD</color>
     <color name="gradient_two_start">#8EC5FC</color>
     <color name="gradient_two_end">#E0C3FC</color>
