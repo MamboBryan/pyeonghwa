@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mainLayout = findViewById(R.id.proverb_layout);
         AnimationDrawable animateBackground = (AnimationDrawable) mainLayout.getBackground();
         animateBackground.setEnterFadeDuration(2000);
-        animateBackground.setEnterFadeDuration(5000);
+        animateBackground.setEnterFadeDuration(4000);
         animateBackground.start();
 
         //get the username entered in previous activity
