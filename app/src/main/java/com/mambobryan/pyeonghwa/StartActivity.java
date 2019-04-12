@@ -69,16 +69,14 @@ public class StartActivity extends AppCompatActivity {
     public void setRevealText(int counter) {
 
         if (counter == 0) {
-            Toast.makeText(this, "You've gotten a hint", Toast.LENGTH_SHORT).show();
-        } else if (counter == 1) {
             TextView firstLetter = findViewById(R.id.start_puzzle_o);
             firstLetter.setText("O");
-
-        } else if (counter == 2) {
+            Toast.makeText(this, "You've gotten a hint", Toast.LENGTH_SHORT).show();
+        } else if (counter == 1) {
             TextView firstLetter = findViewById(R.id.start_puzzle_u);
             firstLetter.setText("U");
 
-        } else if (counter == 3) {
+        } else if (counter == 2) {
             TextView firstLetter = findViewById(R.id.start_puzzle_t);
             firstLetter.setText("T");
 
@@ -86,7 +84,7 @@ public class StartActivity extends AppCompatActivity {
             Intent startIntent = new Intent(StartActivity.this, WelcomeActivity.class);
             StartActivity.this.startActivity(startIntent);
 
-        } else {
+        }  else {
             Toast.makeText(this, "Too many long press", Toast.LENGTH_SHORT).show();
         }
 
