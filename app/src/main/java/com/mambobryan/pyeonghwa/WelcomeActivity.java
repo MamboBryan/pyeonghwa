@@ -1,17 +1,12 @@
 package com.mambobryan.pyeonghwa;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -45,7 +40,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
                     //Start new activity
                     Intent welcomeIntent = new Intent(
-                            WelcomeActivity.this, FirstPuzzleActivity.class);
+                            WelcomeActivity.this, MainActivity.class);
 
                     welcomeIntent.putExtra("username", usernameString);
                     WelcomeActivity.this.startActivity(welcomeIntent);

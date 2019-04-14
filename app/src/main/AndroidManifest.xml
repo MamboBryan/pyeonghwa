@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".WelcomeActivity" />
-        <activity android:name=".FirstPuzzleActivity">
+        <activity android:name=".MainActivity">
 
         </activity>
     </application>
